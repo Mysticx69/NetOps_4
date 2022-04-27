@@ -1,0 +1,19 @@
+{
+    "ip_interfaces":[
+       {
+          "nom":"fa1/1",
+          "mode":"access",
+          "vlan_id":"50"
+       },
+       {
+          "nom":"fa1/2",
+          "mode":"access",
+          "vlan_id":"60"
+       },
+       {
+          "nom":"fa1/0",
+          "mode":"trunk"
+       }
+    ]
+
+ }
