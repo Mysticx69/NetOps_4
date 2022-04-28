@@ -1,6 +1,6 @@
-from netmiko import ConnectHandler
-import os
+"""Netmiko module"""
 import json
+from netmiko import ConnectHandler
 
 devices = {
     "R1": {

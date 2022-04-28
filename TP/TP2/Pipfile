@@ -9,6 +9,8 @@ jinja2 = "*"
 netmiko = "*"
 genie = "*"
 pyats = "*"
+pep8 = "*"
+pylint = "*"
 
 [dev-packages]
 

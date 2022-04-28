@@ -1,28 +1,27 @@
-# import
-from re import template
-from script.paramiko_ssh import write_remote_SSH, save_config
-from script.create_config import (
-    create_vlan_config_cpe_marseille,
-    create_vlan_config_cpe_paris,
-    render_network_config,
+"""Main file"""
+
+# imports
+from create_config import (
+    create_config_r1,
+    create_vlan_cpeparis,
+    create_vlan_cpemarseille,
     save_built_config,
-    create_R1_config,
 )
-from script.netmiko_ssh import get_inventory, get_config_int_admin_router, deploy_config
+from netmiko_ssh import get_inventory, deploy_config
 
 
 def build():
-
+    """Build all devices config user methods from create_config module"""
     # Create configs
-    ESW2, R2 = create_vlan_config_cpe_marseille()
-    ESW3, R3 = create_vlan_config_cpe_paris()
-    R1 = create_R1_config()
+    esw2, router2 = create_vlan_cpemarseille()
+    esw3, router3 = create_vlan_cpeparis()
+    router1 = create_config_r1()
 
-    save_built_config(ESW2, "ESW2")
-    save_built_config(R2, "R2")
-    save_built_config(R3, "R3")
-    save_built_config(ESW3, "ESW3")
-    save_built_config(R1, "R1")
+    save_built_config(esw2, "ESW2")
+    save_built_config(router2, "R2")
+    save_built_config(router3, "r3")
+    save_built_config(esw3, "esw3")
+    save_built_config(router1, "R1")
 
 
 if __name__ == "__main__":
@@ -67,6 +66,6 @@ if __name__ == "__main__":
         "exit",
     ]
     build()
-    inventory = "inventory/hosts.json"
-    inventory_data = get_inventory(inventory)
+    INVENTORY = "inventory/hosts.json"
+    inventory_data = get_inventory(INVENTORY)
     deploy_config(inventory_data)
