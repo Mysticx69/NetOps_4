@@ -1,4 +1,3 @@
-configure terminal
 {% for interface in interfaces %}
   interface {{ interface.nom }}
     {% if interface.vlan_id !=null %}

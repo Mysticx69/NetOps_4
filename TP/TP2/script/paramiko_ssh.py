@@ -50,7 +50,7 @@ def save_config(dict_device_name):
         command = "sh run"
 
         remote_conn.send(f"{command}\n")  # Send $command
-        time.sleep(2)
+        time.sleep(20)
         output = remote_conn.recv(nbytes)  # Get output data from the channel
         f = open(f"configs/{device}_bck.conf", "a")
         f.write(output.decode("utf-8"))
