@@ -28,8 +28,23 @@ with open(SWITCH_DATA_ESW2, encoding="utf_8") as json_file:
 
 env = Environment(loader=FileSystemLoader("templates"))
 
-
 # Functions
+
+
+def build() -> None:
+    """Build all devices config"""
+    # Create configs
+    esw2, router2 = create_vlan_cpemarseille()
+    esw3, router3 = create_vlan_cpeparis()
+    router1 = create_config_r1()
+
+    save_built_config(esw2, "ESW2")
+    save_built_config(router2, "R2")
+    save_built_config(router3, "R3")
+    save_built_config(esw3, "ESW3")
+    save_built_config(router1, "R1")
+
+
 def render_network_config(file, data):
     """Return data processed from jinja2 template"""
 

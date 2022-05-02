@@ -1,0 +1,37 @@
+  # devices = {
+    #     "R1": {
+    #         "device_type": "cisco_ios",
+    #         "ip": "172.16.100.126",
+    #         "username": "cisco",
+    #         "password": "cisco",
+    #     },
+    #     "R2": {
+    #         "device_type": "cisco_ios",
+    #         "ip": "172.16.100.190",
+    #         "username": "cisco",
+    #         "password": "cisco",
+    #     },
+    #     "R3": {
+    #         "device_type": "cisco_ios",
+    #         "ip": "172.16.100.254",
+    #         "username": "cisco",
+    #         "password": "cisco",
+    #     },
+    # }
+    # # liste des commandes pour paramiko
+    # commands_lo = [
+    #     "conf t ",
+    #     "int lo0",
+    #     "ip add 192.168.1.1 255.255.255.255",
+    #     "descr loopback interface set by paramiko 2",
+    #     "exit",
+    # ]
+
+    # commands_sh_conf = ["sh run int lo0"]
+
+    # commands_add_desc = [
+    #     "conf t",
+    #     "int g0/0.99",
+    #     "descr loopback interface set by paramiko 3",
+    #     "exit",
+    # ]

@@ -52,7 +52,7 @@ devices = {
 # print(f"\n{output}\n")
 
 
-def get_inventory(json_file):
+def get_inventory(json_file) -> str:
     with open(f"{json_file}") as json_file:
         data = json.load(json_file)
 
