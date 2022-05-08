@@ -1,5 +1,5 @@
 """Main file"""
-# imports
+# imports methods from local modules
 from netmiko_ssh import get_inventory, deploy_config
 from create_config import build
 
