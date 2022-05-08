@@ -12,7 +12,7 @@ def get_inventory(json_file) -> str:
     return data
 
 
-def get_config_int_admin_router(inventory_data):
+def get_config_int_admin_router(inventory_data) -> None:
     '''Get config from router'''
     output = ""
     for device in inventory_data:
@@ -23,10 +23,8 @@ def get_config_int_admin_router(inventory_data):
             device.update({"hostname": hostname})
             output += f"\nConfig de l'interface admin de {hostname} : \n{net_connect.send_command('sh run int g0/0.99')}"
 
-    return output
 
-
-def deploy_config(inventory_data):
+def deploy_config(inventory_data) -> None:
     '''Deploy config to devices'''
     for device in inventory_data:
         hostname = device.get("hostname")
@@ -37,7 +35,7 @@ def deploy_config(inventory_data):
         print(output)
 
 
-def deploy_backup_config(inventory_data):
+def deploy_backup_config(inventory_data) -> None:
     '''Deploy backup config to devices'''
     for device in inventory_data:
         hostname = device.get("hostname")
@@ -48,7 +46,7 @@ def deploy_backup_config(inventory_data):
         print(output)
 
 
-def save_config(inventory_data):
+def save_config(inventory_data) -> None:
     '''Save config to file'''
     for device in inventory_data:
         hostname = device.get("hostname")
