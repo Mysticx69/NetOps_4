@@ -3,27 +3,6 @@ import json
 import os
 from netmiko import ConnectHandler
 
-devices = {
-    "R1": {
-        "device_type": "cisco_ios",
-        "ip": "172.16.100.126",
-        "username": "cisco",
-        "password": "cisco",
-    },
-    "R2": {
-        "device_type": "cisco_ios",
-        "ip": "172.16.100.190",
-        "username": "cisco",
-        "password": "cisco",
-    },
-    "R3": {
-        "device_type": "cisco_ios",
-        "ip": "172.16.100.254",
-        "username": "cisco",
-        "password": "cisco",
-    },
-}
-
 
 def get_inventory(json_file) -> str:
     '''Get inventory from file'''
