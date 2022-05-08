@@ -28,11 +28,10 @@ with open(SWITCH_DATA_ESW2, encoding="utf_8") as json_file:
 
 env = Environment(loader=FileSystemLoader("templates"))
 
+
 # Functions
-
-
 def build() -> None:
-    """Build all devices config"""
+    """Build all devices config from jinja templates"""
     # Create configs
     esw2, router2 = create_vlan_cpemarseille()
     esw3, router3 = create_vlan_cpeparis()

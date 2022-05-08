@@ -41,6 +41,7 @@ def get_config_int_admin_router(inventory_data):
         if "R" in device.get("hostname"):
             device.pop("hostname")
             net_connect = ConnectHandler(**device)
+            device.update({"hostname": hostname})
             output += f"\nConfig de l'interface admin de {hostname} : \n{net_connect.send_command('sh run int g0/0.99')}"
 
     return output
@@ -52,7 +53,19 @@ def deploy_config(inventory_data):
         hostname = device.get("hostname")
         device.pop("hostname")
         net_connect = ConnectHandler(**device)
+        device.update({"hostname": hostname})
         output = net_connect.send_config_from_file(f"configs/{hostname}.conf")
+        print(output)
+
+
+def deploy_backup_config(inventory_data):
+    '''Deploy backup config to devices'''
+    for device in inventory_data:
+        hostname = device.get("hostname")
+        device.pop("hostname")
+        net_connect = ConnectHandler(**device)
+        device.update({"hostname": hostname})
+        output = net_connect.send_config_from_file(f"backup_cfg/{hostname}.conf")
         print(output)
 
 
@@ -62,6 +75,7 @@ def save_config(inventory_data):
         hostname = device.get("hostname")
         device.pop("hostname")
         net_connect = ConnectHandler(**device)
+        device.update({"hostname": hostname})
         output = net_connect.send_command("sh run")
         target_path = 'backup_cfg'
         if not os.path.exists(target_path):
