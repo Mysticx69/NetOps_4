@@ -11,6 +11,7 @@ genie = "*"
 pyats = "*"
 pep8 = "*"
 pylint = "*"
+yapf = "*"
 
 [dev-packages]
 
