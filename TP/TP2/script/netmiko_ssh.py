@@ -1,5 +1,6 @@
 """Netmiko module"""
 import json
+import os
 from netmiko import ConnectHandler
 
 devices = {
@@ -25,35 +26,45 @@ devices = {
 
 
 def get_inventory(json_file) -> str:
-    with open(f"{json_file}") as json_file:
+    '''Get inventory from file'''
+    with open(f"{json_file}", encoding="utf8") as json_file:
         data = json.load(json_file)
 
     return data
 
 
 def get_config_int_admin_router(inventory_data):
+    '''Get config from router'''
     output = ""
-    hostname = []
-    for item in inventory_data:
-        hostname.append(item["hostname"])
-
-    counter = 0
     for device in inventory_data:
+        hostname = device.get("hostname")
         if "R" in device.get("hostname"):
             device.pop("hostname")
             net_connect = ConnectHandler(**device)
-            output += f"\nConfig de l'interface admin de {hostname[counter]} : \n{net_connect.send_command('sh run int g0/0.99')}"
-            counter += 1
+            output += f"\nConfig de l'interface admin de {hostname} : \n{net_connect.send_command('sh run int g0/0.99')}"
 
     return output
 
 
 def deploy_config(inventory_data):
-
+    '''Deploy config to devices'''
     for device in inventory_data:
         hostname = device.get("hostname")
         device.pop("hostname")
         net_connect = ConnectHandler(**device)
-        file_config = f"configs/{hostname}.conf"
-        output = net_connect.send_config_from_file(file_config)
+        output = net_connect.send_config_from_file(f"configs/{hostname}.conf")
         print(output)
+
+
+def save_config(inventory_data):
+    '''Save config to file'''
+    for device in inventory_data:
+        hostname = device.get("hostname")
+        device.pop("hostname")
+        net_connect = ConnectHandler(**device)
+        output = net_connect.send_command("sh run")
+        target_path = 'backup_cfg'
+        if not os.path.exists(target_path):
+            os.makedirs(target_path)
+        with open(f"backup_cfg/{hostname}.conf", "w", encoding="utf8") as file:
+            file.write(output)

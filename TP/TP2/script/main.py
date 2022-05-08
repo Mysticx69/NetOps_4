@@ -1,6 +1,6 @@
 """Main file"""
 # imports methods from local modules
-from netmiko_ssh import get_inventory, deploy_config
+from netmiko_ssh import get_inventory, deploy_config, save_config
 from create_config import build
 
 
@@ -12,6 +12,7 @@ def main():
     build()
     inventory_data = get_inventory("inventory/hosts.json")  # => Get inventory from file
     deploy_config(inventory_data)
+    save_config(inventory_data)
 
 
 if __name__ == "__main__":
