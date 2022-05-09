@@ -1,0 +1,42 @@
+[
+    {
+      "device_name": "R1",
+      "hostname": "172.16.100.126",
+      "username": "cisco",
+      "password": "cisco"
+    },
+    {
+      "device_name": "R2",
+      "hostname": "172.16.100.190",
+      "username": "cisco",
+      "password": "cisco"
+    },
+    {
+      "device_name": "R3",
+      "hostname": "172.16.100.254",
+      "username": "cisco",
+      "password": "cisco"
+    },
+  
+    {
+      "device_name": "ESW1",
+      "hostname": "172.16.100.125",
+      "username": "cisco",
+      "password": "cisco"
+    },
+  
+    {
+      "device_name": "ESW2",
+      "hostname": "172.16.100.189",
+      "username": "cisco",
+      "password": "cisco"
+    },
+  
+    {
+      "device_name": "ESW3",
+      "hostname": "172.16.100.253",
+      "username": "cisco",
+      "password": "cisco"
+    }
+  ]
+  

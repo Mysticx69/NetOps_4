@@ -22,6 +22,14 @@
   },
 
   {
+    "hostname": "ESW1",
+    "ip": "172.16.100.125",
+    "device_type": "cisco_ios",
+    "username": "cisco",
+    "password": "cisco"
+  },
+
+  {
     "hostname": "ESW2",
     "ip": "172.16.100.189",
     "device_type": "cisco_ios",

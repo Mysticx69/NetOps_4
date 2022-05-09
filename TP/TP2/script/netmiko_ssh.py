@@ -59,3 +59,17 @@ def save_config(inventory_data) -> None:
             os.makedirs(target_path)
         with open(f"backup_cfg/{hostname}.conf", "w", encoding="utf8") as file:
             file.write(output)
+
+
+def save_single_config(device) -> None:
+    '''Save config to file'''
+    hostname = device.get("hostname")
+    device.pop("hostname")
+    net_connect = ConnectHandler(**device)
+    device.update({"hostname": hostname})
+    output = net_connect.send_command("sh run")
+    target_path = 'backup_cfg'
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
+    with open(f"backup_cfg/{hostname}.conf", "w", encoding="utf8") as file:
+        file.write(output)

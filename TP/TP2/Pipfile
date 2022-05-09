@@ -12,7 +12,6 @@ pyats = "*"
 pep8 = "*"
 pylint = "*"
 yapf = "*"
+napalm = "*"
 
 [dev-packages]
-
-
