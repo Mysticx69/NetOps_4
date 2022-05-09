@@ -1,7 +1,3 @@
-
-Building configuration...
-
-Current configuration : 2082 bytes
 !
 upgrade fpd auto
 version 12.4
@@ -9,7 +5,7 @@ service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
 !
-hostname R3
+hostname R1
 !
 boot-start-marker
 boot-end-marker
@@ -25,7 +21,7 @@ ip cef
 !
 !
 no ip domain lookup
-ip domain name r3.cpe.local
+ip domain name cpe.local
 no ipv6 cef
 !
 multilink bundle-name authenticated
@@ -61,12 +57,21 @@ ip scp server enable
 !
 !
 !
+interface Loopback1
+ description "interface loopback 1"
+ ip address 192.168.1.1 255.255.255.255
+!
+interface Loopback2
+ description "interface loopback 2"
+ ip address 192.168.2.1 255.255.255.255
+!
 interface Ethernet0/0
  no ip address
  shutdown
  duplex auto
 !
 interface GigabitEthernet0/0
+ description "test"
  no ip address
  duplex full
  speed 1000
@@ -75,28 +80,28 @@ interface GigabitEthernet0/0
 !
 interface GigabitEthernet0/0.10
  encapsulation dot1Q 10
- ip address 172.16.50.254 255.255.255.0
+ ip address 172.16.10.254 255.255.255.0
 !
 interface GigabitEthernet0/0.20
  encapsulation dot1Q 20
- ip address 172.16.60.254 255.255.255.0
+ ip address 172.16.20.254 255.255.255.0
 !
 interface GigabitEthernet0/0.99
  description loopback interface set by paramiko 3
  encapsulation dot1Q 99
- ip address 172.16.100.254 255.255.255.192
+ ip address 172.16.100.126 255.255.255.192
 !
 interface Serial1/0
- no ip address
- shutdown
+ ip address 10.1.1.1 255.255.255.252
  serial restart-delay 0
 !
 interface Serial1/1
- ip address 10.1.3.2 255.255.255.252
+ ip address 10.1.3.1 255.255.255.252
  serial restart-delay 0
 !
 interface Serial1/2
- ip address 10.1.2.2 255.255.255.0
+ no ip address
+ shutdown
  serial restart-delay 0
 !
 interface Serial1/3
@@ -104,17 +109,22 @@ interface Serial1/3
  shutdown
  serial restart-delay 0
 !
+interface GigabitEthernet2/0
+ ip address 172.16.100.62 255.255.255.192
+ negotiation auto
+!
 router ospf 1
- router-id 3.3.3.3
+ router-id 1.1.1.1
  log-adjacency-changes
- network 10.1.2.0 0.0.0.3 area 0
+ network 10.1.1.0 0.0.0.3 area 0
  network 10.1.3.0 0.0.0.3 area 0
- network 172.16.50.0 0.0.0.255 area 0
- network 172.16.60.0 0.0.0.255 area 0
- network 172.16.100.192 0.0.0.63 area 0
+ network 172.16.10.0 0.0.0.255 area 0
+ network 172.16.20.0 0.0.0.255 area 0
+ network 172.16.100.0 0.0.0.63 area 0
 !
 ip forward-protocol nd
-ip route 172.16.100.0 255.255.255.192 Serial1/1
+ip route 172.16.100.128 255.255.255.192 Serial1/0
+ip route 172.16.100.192 255.255.255.192 Serial1/1
 no ip http server
 no ip http secure-server
 !

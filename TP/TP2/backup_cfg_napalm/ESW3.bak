@@ -1,7 +1,3 @@
-
-Building configuration...
-
-Current configuration : 3219 bytes
 !
 version 12.4
 service timestamps debug datetime msec

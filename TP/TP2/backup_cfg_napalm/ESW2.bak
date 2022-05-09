@@ -1,7 +1,3 @@
-
-Building configuration...
-
-Current configuration : 3219 bytes
 !
 version 12.4
 service timestamps debug datetime msec
@@ -9,7 +5,7 @@ service timestamps log datetime msec
 no service password-encryption
 no service dhcp
 !
-hostname ESW3
+hostname ESW2
 !
 boot-start-marker
 boot-end-marker
@@ -25,7 +21,7 @@ no ip cef
 !
 !
 no ip domain lookup
-ip domain name esw4.cpe.local
+ip domain name esw2.cpe.local
 !
 multilink bundle-name authenticated
 !
@@ -169,10 +165,9 @@ interface FastEthernet2/0
 interface Vlan1
  no ip address
  no ip route-cache
- shutdown
 !
 interface Vlan99
- ip address 172.16.100.253 255.255.255.192
+ ip address 172.16.100.189 255.255.255.192
 !
 ip forward-protocol nd
 !

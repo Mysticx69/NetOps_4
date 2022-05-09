@@ -13,12 +13,13 @@ def main():
     3. Save all configs in backup_cfg folder -> save_config()"""
 
     build()
-    # inventory_data = get_inventory("inventory/hosts.json")  # => Get inventory from file
-    # deploy_config(inventory_data)
-    # sleep(10)
-    # inventory_data_to_save = get_inventory("inventory/hosts.json")  # => Get inventory from file
-    # save_config(inventory_data_to_save)
+    inventory_data = get_inventory("inventory/hosts.json")  # => Get inventory from file
+    deploy_config(inventory_data)
+    sleep(10)
+    inventory_data_to_save = get_inventory("inventory/hosts.json")  # => Get inventory from file
+    save_config(inventory_data_to_save)
     inventory_napalm = get_inventory("inventory/hosts_napalm.json")  # => Get inventory from file
+    deploy_config_ospf(inventory_napalm)
     backup_config(inventory_napalm)
 
 
