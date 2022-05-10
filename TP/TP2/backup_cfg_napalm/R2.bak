@@ -57,6 +57,10 @@ ip scp server enable
 !
 !
 !
+interface Loopback0
+ description loopback0
+ no ip address
+!
 interface Ethernet0/0
  no ip address
  shutdown

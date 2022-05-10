@@ -4,6 +4,35 @@ import os
 from napalm import get_network_driver
 
 
+def deploy_bakcup_config(inventory_dict):
+    '''Deploy backup config'''
+    for device in inventory_dict:
+        hostname = device.get('device_name')
+        driver = get_network_driver('ios')
+        device.pop('device_name')
+        device_connect = driver(**device)
+        device.update({"device_name": hostname})
+        device_connect.open()
+        device_connect.load_merge_candidate(filename=f'backup_cfg_napalm/{hostname}.bak')
+        print(f"\nChanges on device {hostname} :\n", device_connect.compare_config())
+
+        try:
+            choice = input("\nWould you like to commit these changes? [yN]: ")
+
+            if choice.lower() == 'y':
+                device_connect.commit_config()
+                print(f"\nChanges committed on device {hostname}")
+
+            else:
+                device_connect.discard_config()
+                print(f"\nChanges discarded on device {hostname}")
+
+        except Exception as error:
+            print(f"\nError: {error}")
+
+        device_connect.close()
+
+
 def deploy_config_ospf(inventory_dict):
     '''Deploy config'''
     for device in inventory_dict:
