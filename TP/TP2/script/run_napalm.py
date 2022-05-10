@@ -15,7 +15,7 @@ def deploy_config_ospf(inventory_dict):
             device.update({"device_name": hostname})
             device_connect.open()
             device_connect.load_merge_candidate(filename=f'configs/OSPF_{hostname}.conf')
-            print(device_connect.compare_config())
+            print(f"Changes on device {hostname} :\n", device_connect.compare_config())
 
             try:
                 choice = input("\nWould you like to commit these changes? [yN]: ")
@@ -26,6 +26,12 @@ def deploy_config_ospf(inventory_dict):
             if choice == "y":
                 print("Committing ...")
                 device_connect.commit_config()
+                print("Commit successful")
+                rollback = input("\nWould you like to rollback? [yN]: ")
+                if rollback == "y":
+                    print("Rolling back ...")
+                    device_connect.rollback()
+                    print("Rollback successful")
 
             else:
                 print("Discarding ...")
