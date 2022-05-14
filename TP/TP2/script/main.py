@@ -12,11 +12,15 @@ def main():
     4. Save all configs in backup_cfg_napalm folder -> backup_config()"""
 
     build()
+
     inventory_napalm = get_inventory("inventory_napalm.json")
+
     deploy_config_merged(inventory_napalm)
     print('\nEnd off deployment => OSPF conf next :\n')
+
     deploy_config_ospf(inventory_napalm)
     print('\nEnd off configurtions => Lets backup the conf :\n')
+
     backup_config(inventory_napalm)
     print("Backup done => .bak in backup_cfg_napalm folder")
     # deploy_backcup_config(inventory_napalm)
