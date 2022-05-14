@@ -26,3 +26,4 @@ Que se passe-t-il ? Pourquoi ?
 
 24. Affichez la variable net_connect. Que contient la variable ? Quels
 sont les attributs de la variable ?
+    *Un objet netmiko <netmiko.cisco.cisco_ios.CiscoIosSSH object at 0x7fec169d3310>
