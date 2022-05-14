@@ -65,18 +65,26 @@ def deploy_config_merged(inventory_dict) -> None:
         try:
             choice = input("\nWould you like to commit these changes? [yN]: ")
 
-            if choice.lower() == 'y':
-                device_connect.commit_config()
-                print(f"\nChanges committed on device {hostname}\n")
+        except NameError:
+            choice = input("\nWould you like to commit these changes? [yN]: ")
 
-            else:
-                device_connect.discard_config()
-                print(f"\nChanges discarded on device {hostname}")
+        if choice == "y":
+            print("Committing ...")
+            device_connect.commit_config()
+            print("Commit successful")
 
-        except NameError as error:
-            print(f"\nError: {error}")
+            rollback = input("\nWould you like to rollback? [yN]: ")
+            if rollback == "y":
+                print("Rolling back ...")
+                device_connect.rollback()
+                print("Rollback successful")
+
+        else:
+            print("Discarding ...")
+            device_connect.discard_config()
 
         device_connect.close()
+        print("Done")
 
 
 def deploy_config_replace(inventory_dict) -> None:
@@ -94,18 +102,25 @@ def deploy_config_replace(inventory_dict) -> None:
         try:
             choice = input("\nWould you like to commit these changes? [yN]: ")
 
-            if choice.lower() == 'y':
-                device_connect.commit_config()
-                print(f"\nChanges committed on device {hostname}")
+        except NameError:
+            choice = input("\nWould you like to commit these changes? [yN]: ")
 
-            else:
-                device_connect.discard_config()
-                print(f"\nChanges discarded on device {hostname}")
+        if choice == "y":
+            print("Committing ...")
+            device_connect.commit_config()
+            print("Commit successful")
+            rollback = input("\nWould you like to rollback? [yN]: ")
+            if rollback == "y":
+                print("Rolling back ...")
+                device_connect.rollback()
+                print("Rollback successful")
 
-        except NameError as error:
-            print(f"\nError: {error}")
+        else:
+            print("Discarding ...")
+            device_connect.discard_config()
 
         device_connect.close()
+        print("Done")
 
 
 def backup_config(inventory_dict):
@@ -143,15 +158,22 @@ def deploy_backcup_config(inventory_dict) -> None:
         try:
             choice = input("\nWould you like to commit these changes? [yN]: ")
 
-            if choice.lower() == 'y':
-                device_connect.commit_config()
-                print(f"\nChanges committed on device {hostname}")
+        except NameError:
+            choice = input("\nWould you like to commit these changes? [yN]: ")
 
-            else:
-                device_connect.discard_config()
-                print(f"\nChanges discarded on device {hostname}")
+        if choice == "y":
+            print("Committing ...")
+            device_connect.commit_config()
+            print("Commit successful")
+            rollback = input("\nWould you like to rollback? [yN]: ")
+            if rollback == "y":
+                print("Rolling back ...")
+                device_connect.rollback()
+                print("Rollback successful")
 
-        except NameError as error:
-            print(f"\nError: {error}")
+        else:
+            print("Discarding ...")
+            device_connect.discard_config()
 
         device_connect.close()
+        print("Done")
