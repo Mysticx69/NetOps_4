@@ -1,5 +1,5 @@
 ---
-ip_interfaces:
+interfaces:
 - nom: fa1/1
   mode: access
   vlan_id: '10'

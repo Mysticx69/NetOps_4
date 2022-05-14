@@ -1,0 +1,10 @@
+---
+interfaces:
+- nom: fa2/0
+  mode: access
+  vlan_id: '10'
+- nom: fa2/1
+  mode: access
+  vlan_id: '20'
+- nom: fa2/2
+  mode: trunk

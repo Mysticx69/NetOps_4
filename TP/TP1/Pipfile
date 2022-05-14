@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 jinja2 = "*"
 pyyaml = "*"
+yapf = "*"
+pylint = "*"
 
 [dev-packages]
 

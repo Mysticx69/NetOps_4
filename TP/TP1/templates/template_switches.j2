@@ -1,0 +1,13 @@
+conf t
+{% for interface in interfaces %}
+interface {{ interface.nom }}
+switchport mode {{ interface.mode }}
+{% if "trunk" == interface.mode %} 
+switchport trunk allowed vlan all
+{% endif %}
+{% if interface.vlan_id != null %}
+switchport access vlan {{ interface.vlan_id }}
+{% endif %}
+no shutdown
+exit
+{% endfor %}
