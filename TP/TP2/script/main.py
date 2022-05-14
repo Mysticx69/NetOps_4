@@ -1,4 +1,4 @@
-"""Main file"""
+"""Main Module"""
 # imports methods from local modules
 from time import sleep
 from netmiko_ssh import get_inventory, deploy_config, save_config

@@ -1,8 +1,12 @@
-import paramiko
+'''Paramiko module with write and save config methods'''
+#-Imports-#
+import os
 import time
+import paramiko
 
 
-def write_remote_SSH(dict_devices, commands):
+def write_remote_ssh(dict_devices, commands):
+    '''Write commands to remote devices using SSH'''
 
     ssh = paramiko.SSHClient()  # initialization of SSHClient class
 
@@ -32,6 +36,7 @@ def write_remote_SSH(dict_devices, commands):
 
 
 def save_config(dict_device_name):
+    '''Save running config to file in backup_cfg folder'''
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     for device in dict_device_name:
@@ -52,6 +57,9 @@ def save_config(dict_device_name):
         remote_conn.send(f"{command}\n")  # Send $command
         time.sleep(20)
         output = remote_conn.recv(nbytes)  # Get output data from the channel
-        f = open(f"configs/{device}_bck.conf", "a")
-        f.write(output.decode("utf-8"))
-        f.close()
+        ssh.close()  # Close SSH session
+        # Check if folder exists
+        if not os.path.exists("backup_cfg"):
+            os.mkdir("backup_cfg")
+        with open(f"backup_cfg/{device}.cfg", "w", encoding='utf8') as file:
+            file.write(output.decode("utf-8"))
