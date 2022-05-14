@@ -67,7 +67,7 @@ def deploy_config_merged(inventory_dict) -> None:
 
             if choice.lower() == 'y':
                 device_connect.commit_config()
-                print(f"\nChanges committed on device {hostname}")
+                print(f"\nChanges committed on device {hostname}\n")
 
             else:
                 device_connect.discard_config()
@@ -128,7 +128,7 @@ def backup_config(inventory_dict):
             file.write(output)
 
 
-def deploy_bakcup_config(inventory_dict) -> None:
+def deploy_backcup_config(inventory_dict) -> None:
     '''Deploy backup config from backup_cfg_napalm/{hostname}.bak for all devices in inventory'''
     for device in inventory_dict:
         hostname = device.get('device_name')

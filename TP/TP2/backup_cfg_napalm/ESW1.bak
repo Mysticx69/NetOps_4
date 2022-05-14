@@ -195,7 +195,7 @@ control-plane
 !
 !
 !
-banner exec ^C
+banner exec ^CC
 
 ***************************************************************
 This is a normal Router with a Switch module inside (NM-16ESW)
