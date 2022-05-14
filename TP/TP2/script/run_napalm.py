@@ -4,37 +4,8 @@ import os
 from napalm import get_network_driver
 
 
-def deploy_bakcup_config(inventory_dict):
-    '''Deploy backup config'''
-    for device in inventory_dict:
-        hostname = device.get('device_name')
-        driver = get_network_driver('ios')
-        device.pop('device_name')
-        device_connect = driver(**device)
-        device.update({"device_name": hostname})
-        device_connect.open()
-        device_connect.load_merge_candidate(filename=f'backup_cfg_napalm/{hostname}.bak')
-        print(f"\nChanges on device {hostname} :\n", device_connect.compare_config())
-
-        try:
-            choice = input("\nWould you like to commit these changes? [yN]: ")
-
-            if choice.lower() == 'y':
-                device_connect.commit_config()
-                print(f"\nChanges committed on device {hostname}")
-
-            else:
-                device_connect.discard_config()
-                print(f"\nChanges discarded on device {hostname}")
-
-        except Exception as error:
-            print(f"\nError: {error}")
-
-        device_connect.close()
-
-
 def deploy_config_ospf(inventory_dict):
-    '''Deploy config'''
+    '''Deploy config ospf on routers from configs/OSPF_{hostname}.conf'''
     for device in inventory_dict:
         if "R" in device.get('device_name'):
             hostname = device.get('device_name')
@@ -71,7 +42,7 @@ def deploy_config_ospf(inventory_dict):
 
 
 def backup_config(inventory_dict):
-    '''Backup config'''
+    '''Backup config for all devices in inventory'''
     for device in inventory_dict:
         hostname = device.get('device_name')
         driver = get_network_driver('ios')
@@ -82,7 +53,38 @@ def backup_config(inventory_dict):
         output = device_connect.get_config().get('running')
         device_connect.close()
         target_path = 'backup_cfg_napalm'
+
+        # Create target directory if it does not exist
         if not os.path.exists(target_path):
             os.makedirs(target_path)
         with open(f"backup_cfg_napalm/{hostname}.bak", "w", encoding="utf8") as file:
             file.write(output)
+
+
+def deploy_bakcup_config(inventory_dict):
+    '''Deploy backup config from backup_cfg_napalm/{hostname}.bak for all devices in inventory'''
+    for device in inventory_dict:
+        hostname = device.get('device_name')
+        driver = get_network_driver('ios')
+        device.pop('device_name')
+        device_connect = driver(**device)
+        device.update({"device_name": hostname})
+        device_connect.open()
+        device_connect.load_merge_candidate(filename=f'backup_cfg_napalm/{hostname}.bak')
+        print(f"\nChanges on device {hostname} :\n", device_connect.compare_config())
+
+        try:
+            choice = input("\nWould you like to commit these changes? [yN]: ")
+
+            if choice.lower() == 'y':
+                device_connect.commit_config()
+                print(f"\nChanges committed on device {hostname}")
+
+            else:
+                device_connect.discard_config()
+                print(f"\nChanges discarded on device {hostname}")
+
+        except NameError as error:
+            print(f"\nError: {error}")
+
+        device_connect.close()

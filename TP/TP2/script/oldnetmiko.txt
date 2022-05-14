@@ -1,11 +1,13 @@
 # # Show command that we execute.
 # command = "show ip int brief"
 
+#27.)
 # net_connect = ConnectHandler(**devices["R1"])
 # output = net_connect.send_command(
 #     command, use_textfsm=True
 # )  # use genie (pipenv install genie)
 
+#28.)
 # print(" Etat des interfaces sur R1 : \n")
 # for item in output:
 #     print(f'{item["intf"]} => {item["status"]}')
