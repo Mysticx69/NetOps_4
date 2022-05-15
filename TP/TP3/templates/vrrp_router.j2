@@ -1,0 +1,10 @@
+{% for interface in interfaces %}
+  interface {{ interface.name }}
+    {% if interface.vlan_id !=null %}
+    vrrp {{ interface.vlan_id }} ip {{ interface.vip }}
+    vrrp {{ interface.vlan_id }} priority {{ interface.priority }}
+    vrrp {{ interface.vlan_id }} preempt
+    no vrrp {{ interface.vlan_id }} shutdown
+    {% endif %}
+    no shutdown
+{% endfor %}

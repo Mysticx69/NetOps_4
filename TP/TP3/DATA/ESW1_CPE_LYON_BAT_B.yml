@@ -1,0 +1,13 @@
+---
+interfaces:
+- name: f1/14
+  mode: trunk
+- name: f1/15
+  mode: trunk
+- name: f1/1
+  mode: access
+  vlan_id: '10'
+- name: f1/2
+  mode: access
+  vlan_id: '20'
+

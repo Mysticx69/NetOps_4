@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pylint = "*"
+jinja2 = "*"
+yapf = "*"
+pyyaml = "*"
+nornir = "*"
+nornir-utils = "*"
+install = "*"
+nornir-napalm = "*"
+nornir-netmiko = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

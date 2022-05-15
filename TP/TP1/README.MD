@@ -1,6 +1,7 @@
 # Compte rendu TP1
 
 ## Réponse aux questions du TP1 (Voir code pour le reste)
+## Tout le code est organisé pour ne lancer que le main depuis la racine du tp => python3 script/main.py
 <br/>
 
 ### 1.6 Préparation des variables pour le template JINJA

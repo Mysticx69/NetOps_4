@@ -1,0 +1,348 @@
+2022-05-15 19:00:38,941 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 6 hosts
+2022-05-15 19:03:52,189 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 6 hosts
+2022-05-15 19:05:39,381 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 6 hosts
+2022-05-15 19:07:38,127 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:11:40,973 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:11:40,975 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 6 hosts
+2022-05-15 19:11:45,983 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.123:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.123
+
+2022-05-15 19:11:45,984 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.125:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.125
+
+2022-05-15 19:11:45,985 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-A': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.126:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.126
+
+2022-05-15 19:11:45,986 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.187:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.187
+
+2022-05-15 19:11:45,988 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.189:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.189
+
+2022-05-15 19:11:45,989 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.190:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-gd6N0XYp/lib/python3.9/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.190
+

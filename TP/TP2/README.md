@@ -1,6 +1,7 @@
 # Compte rendu TP2
 
 ## Réponse aux questions du TP2 (Voir code pour le reste) => le fichier oldnetmiko.txt contient des bouts de codes permettant de répondre à différentes questions de ce TP
+## Tout le code est organisé pour ne lancer que le main depuis la racine du tp => python3 script/main.py
 <br/>
 
 ### 1.9 -Automatisation réseau avec Paramiko
