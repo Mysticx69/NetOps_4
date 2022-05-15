@@ -1,7 +1,7 @@
 """Main Module"""
 # imports methods from local modules
 from create_config import build
-from run_napalm import backup_config, get_inventory, deploy_config_replace, deploy_config_ospf, deploy_backcup_config, deploy_config_merged
+from run_napalm import backup_config, get_inventory, deploy_config_ospf, deploy_config_merged
 
 
 def main():
