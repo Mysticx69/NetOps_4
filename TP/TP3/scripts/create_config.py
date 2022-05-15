@@ -34,13 +34,13 @@ def render_network_config(template_file, data_file, output_file) -> Any:
 
 def create_config_cpe_bat_a() -> Any:
     '''Create config for CPE bat A.'''
-    render_network_config('vlan_router.j2', 'R1_CPE_LYON_BAT_A.yml', 'R1_CPE_LYON_BAT_A.conf')
-    render_network_config('vlan_router.j2', 'R2_CPE_LYON_BAT_A.yml', 'R2_CPE_LYON_BAT_A.conf')
-    render_network_config('vlan_switch.j2', 'ESW1_CPE_LYON_BAT_A.yml', 'ESW1_CPE_LYON_BAT_A.conf')
+    render_network_config('vlan_router.j2', 'R1_CPE_LYON_BAT_A.yml', 'R1-CPE-BAT-A.conf')
+    render_network_config('vlan_router.j2', 'R2_CPE_LYON_BAT_A.yml', 'R2-CPE-BAT-A.conf')
+    render_network_config('vlan_switch.j2', 'ESW1_CPE_LYON_BAT_A.yml', 'ESW1-CPE-BAT-A.conf')
 
 
 def create_config_cpe_bat_b() -> Any:
     '''Create config for CPE bat B.'''
-    render_network_config('vlan_router.j2', 'R1_CPE_LYON_BAT_B.yml', 'R1_CPE_LYON_BAT_B.conf')
-    render_network_config('vlan_router.j2', 'R2_CPE_LYON_BAT_B.yml', 'R2_CPE_LYON_BAT_B.conf')
-    render_network_config('vlan_switch.j2', 'ESW1_CPE_LYON_BAT_B.yml', 'ESW1_CPE_LYON_BAT_B.conf')
+    render_network_config('vlan_router.j2', 'R1_CPE_LYON_BAT_B.yml', 'R1-CPE-BAT-B.conf')
+    render_network_config('vlan_router.j2', 'R2_CPE_LYON_BAT_B.yml', 'R2-CPE-BAT-B.conf')
+    render_network_config('vlan_switch.j2', 'ESW1_CPE_LYON_BAT_B.yml', 'ESW1-CPE-BAT-B.conf')

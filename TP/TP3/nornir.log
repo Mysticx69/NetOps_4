@@ -346,3 +346,1029 @@ Traceback (most recent call last):
     raise ConnectionException("Cannot connect to {}".format(self.hostname))
 napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.190
 
+2022-05-15 19:19:22,984 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:19:22,985 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 6 hosts
+2022-05-15 19:20:17,810 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:20:17,814 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:24:44,179 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:24:44,181 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:24:48,303 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:25:00,765 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:25:00,765 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:25:05,201 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:37:47,171 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:37:47,172 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:37:50,915 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:37:54,470 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 19:38:01,931 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 19:42:06,254 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:42:06,256 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:42:10,225 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:42:14,611 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 19:42:20,238 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 19:42:29,869 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 19:46:44,183 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:46:44,186 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:46:48,285 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:46:51,970 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 19:46:57,323 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 19:47:07,848 -  nornir.core -     INFO -        run() - Running task 'save_running_config' with args {} on 6 hosts
+2022-05-15 19:47:07,849 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:07,849 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-A': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:07,850 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:07,850 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:07,850 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:07,851 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:36,655 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:47:36,658 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:47:40,321 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:47:44,620 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 19:47:49,983 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 19:47:59,799 -  nornir.core -     INFO -        run() - Running task 'save_running_config' with args {} on 6 hosts
+2022-05-15 19:47:59,800 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:59,800 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-A': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:59,800 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:59,801 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:59,801 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:47:59,801 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'save_running_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: save_running_config() takes 0 positional arguments but 1 was given
+
+2022-05-15 19:53:57,361 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:53:57,364 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:54:01,266 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:54:05,513 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 19:54:10,893 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 19:54:20,500 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 19:54:23,725 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 19:55:41,476 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 19:55:41,478 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 19:55:45,511 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 19:55:49,970 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 19:55:55,327 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 19:56:05,340 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 19:56:09,363 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:20:03,789 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:20:03,791 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:20:20,513 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:20:20,516 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:20:44,194 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:20:44,196 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:20:49,672 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:20:49,674 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:20:58,328 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:20:58,330 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:22:05,922 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:22:05,923 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:22:06,897 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-A': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.126
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.126:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.126
+
+2022-05-15 20:22:06,898 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.189
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.189:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.189
+
+2022-05-15 20:22:06,900 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.125
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.125:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.125
+
+2022-05-15 20:22:06,901 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.190
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.190:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.190
+
+2022-05-15 20:22:06,902 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:22:11,911 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.123:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.123
+
+2022-05-15 20:22:11,912 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/util.py", line 279, in retry_on_signal
+    return function()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/base_connection.py", line 957, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.16.100.187:22
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/base/base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 172.16.100.187
+
+2022-05-15 20:22:11,912 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:22:11,913 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 20:22:11,913 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 20:22:11,913 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:22:11,913 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 1.1.1.2 255.255.255.255']} on 1 hosts
+2022-05-15 20:22:11,913 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 2.2.2.3 255.255.255.255']} on 1 hosts
+2022-05-15 20:22:11,913 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 6 hosts
+2022-05-15 20:22:11,943 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R1-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:22:11,943 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R2-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:22:11,945 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/ESW1-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:22:11,946 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R1-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:22:11,947 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R2-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:22:11,947 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/ESW1-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:28:34,285 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:28:34,287 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:28:37,988 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:28:44,678 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:28:52,167 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 20:29:04,466 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 20:29:08,080 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:29:11,569 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 1.1.1.2 255.255.255.255']} on 1 hosts
+2022-05-15 20:29:11,902 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 2.2.2.3 255.255.255.255']} on 1 hosts
+2022-05-15 20:29:12,965 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 6 hosts
+2022-05-15 20:29:19,522 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R1-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:29:19,525 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:29:19,534 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R2-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:29:19,534 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:29:19,537 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/ESW1-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:29:20,515 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:29:20,517 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R1-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:29:21,591 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:29:21,591 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R2-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:29:22,620 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:29:22,621 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/ESW1-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:29:24,246 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:30:01,046 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:30:01,048 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:30:05,142 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:30:10,373 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:30:15,851 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 20:30:26,102 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 20:30:29,440 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:30:33,009 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 1.1.1.2 255.255.255.255']} on 1 hosts
+2022-05-15 20:30:33,176 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 2.2.2.3 255.255.255.255']} on 1 hosts
+2022-05-15 20:30:34,150 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 6 hosts
+2022-05-15 20:30:40,211 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R1-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:30:40,213 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:30:40,214 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R2-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:30:40,215 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:30:40,216 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/ESW1-CPE-BAT-A.conf'}} on 1 hosts
+2022-05-15 20:30:41,406 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:30:41,406 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R1-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:30:42,558 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:30:42,558 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/R2-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:30:43,450 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 358, in FileTransfer
+    return FileTransferClass(*args, **kwargs)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 105, in __init__
+    self.source_md5 = self.file_md5(source_file) if hash_supported else None
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 311, in file_md5
+    with open(file_name, "rb") as f:
+TypeError: expected str, bytes or os.PathLike object, not set
+
+2022-05-15 20:30:43,451 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': {'configs/ESW1-CPE-BAT-B.conf'}} on 1 hosts
+2022-05-15 20:30:58,330 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:30:58,332 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:31:02,166 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:31:06,475 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:31:11,633 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 20:31:21,216 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 20:31:24,706 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:31:28,548 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 1.1.1.2 255.255.255.255']} on 1 hosts
+2022-05-15 20:31:28,727 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 2.2.2.3 255.255.255.255']} on 1 hosts
+2022-05-15 20:31:29,757 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 6 hosts
+2022-05-15 20:32:16,008 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:32:16,013 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:32:19,887 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:32:24,193 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:32:29,669 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 20:32:39,730 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 20:32:42,861 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:32:46,309 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 1.1.1.2 255.255.255.255']} on 1 hosts
+2022-05-15 20:32:46,524 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 2.2.2.3 255.255.255.255']} on 1 hosts
+2022-05-15 20:32:47,487 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 6 hosts
+2022-05-15 20:32:53,655 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:33:00,337 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:33:11,769 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:33:19,281 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-15 20:33:19,281 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:33:24,341 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-15 20:33:24,342 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:33:29,329 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-15 20:33:29,329 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:33:37,797 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-15 20:35:24,328 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:35:24,329 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:35:28,200 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:35:32,673 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:35:39,663 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 2.2.2.2 255.255.255.255'} on 1 hosts
+2022-05-15 20:35:51,757 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['wr']} on 6 hosts
+2022-05-15 20:35:55,121 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-15 20:35:58,295 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 1.1.1.2 255.255.255.255']} on 1 hosts
+2022-05-15 20:35:58,523 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['int lo2', 'ip add 2.2.2.3 255.255.255.255']} on 1 hosts
+2022-05-15 20:35:59,377 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 6 hosts
+2022-05-15 20:36:05,446 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:36:13,099 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:36:25,341 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:36:53,345 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:37:11,653 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 43, in napalm_configure
+    device.commit_config()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 555, in commit_config
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+
+
+interface g2/0
+            ^
+% Invalid input detected at '^' marker.
+
+no shutdown
+    ^
+% Invalid input detected at '^' marker.
+
+398 bytes copied in 0.028 secs (14214 bytes/sec)
+
+2022-05-15 20:37:11,653 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:37:30,041 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 43, in napalm_configure
+    device.commit_config()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 555, in commit_config
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+
+
+interface g2/0
+            ^
+% Invalid input detected at '^' marker.
+
+no shutdown
+    ^
+% Invalid input detected at '^' marker.
+
+398 bytes copied in 0.028 secs (14214 bytes/sec)
+
+2022-05-15 20:37:30,042 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:38:46,352 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:38:46,353 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:38:50,158 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['arp_table']} on 2 hosts
+2022-05-15 20:38:54,203 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'configuration': 'interface lo1 \n ip add 1.1.1.1 255.255.255.255'} on 1 hosts
+2022-05-15 20:39:12,557 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:39:12,566 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:39:45,341 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:39:45,344 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:40:02,948 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:40:02,950 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:40:14,310 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:40:14,320 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:40:19,818 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:40:19,820 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:40:59,003 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:40:59,007 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:41:06,129 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:41:06,138 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:41:18,410 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:41:18,412 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:45:32,835 -  nornir.core -     INFO -        run() - Running task 'hello_world' with args {} on 4 hosts
+2022-05-15 20:45:32,836 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip interface brief']} on 4 hosts
+2022-05-15 20:47:06,074 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:47:07,136 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 117, in __enter__
+    self.establish_scp_conn()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 126, in establish_scp_conn
+    self.scp_conn = SCPConn(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 30, in __init__
+    self.establish_scp_conn()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 36, in establish_scp_conn
+    self.scp_conn.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.125
+
+2022-05-15 20:47:07,137 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:47:30,089 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:47:31,103 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 117, in __enter__
+    self.establish_scp_conn()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 126, in establish_scp_conn
+    self.scp_conn = SCPConn(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 30, in __init__
+    self.establish_scp_conn()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 36, in establish_scp_conn
+    self.scp_conn.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.125
+
+2022-05-15 20:47:31,103 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:47:42,347 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:48:08,475 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:48:26,692 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:48:46,248 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:49:40,594 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:49:41,647 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 676, in _xfer_file
+    with TransferClass(**kwargs) as transfer:
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 117, in __enter__
+    self.establish_scp_conn()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 126, in establish_scp_conn
+    self.scp_conn = SCPConn(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 30, in __init__
+    self.establish_scp_conn()
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/netmiko/scp_handler.py", line 36, in establish_scp_conn
+    self.scp_conn.connect(**ssh_connect_params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.16.100.125
+
+2022-05-15 20:49:41,656 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:49:53,327 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:50:17,774 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:50:33,026 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:50:49,005 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:52:13,214 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:52:22,863 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:52:29,360 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:52:41,159 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:53:05,952 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:53:21,975 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:53:37,742 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:54:16,676 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:54:23,483 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-15 20:54:25,204 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:54:37,535 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-15 20:54:40,429 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 20:55:05,241 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-15 20:55:09,891 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:55:26,842 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-15 20:55:30,956 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:55:47,167 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-15 20:55:51,514 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 20:56:17,522 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
