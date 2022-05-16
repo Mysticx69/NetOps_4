@@ -68,6 +68,5 @@ def deploy_config_all() -> None:
 def deploy_config_single(host, config_file) -> None:
     """Load configuration into singe device using nornir_napalm"""
     print_result(
-        nr.filter(device_name=host).run(task=napalm_configure,
-                                        filename=f'configs/{config_file}.conf'))
-    #print_result(nr.filter(device_name=host).run(task=netmiko_save_config))
+        nr.filter(device_name=host).run(task=napalm_configure, filename=f'configs/{config_file}'))
+    #useless print_result(nr.filter(device_name=host).run(task=netmiko_save_config))

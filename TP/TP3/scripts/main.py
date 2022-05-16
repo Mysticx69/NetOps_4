@@ -13,7 +13,8 @@ def main() -> None:
     create_config_cpe_bat_b()
 
     #Deploy conf
-    deploy_config_single("R1-CPE-BAT-A", "R1-CPE-BAT-A")
+    deploy_config_all()
+    #deploy_config_single("ESW1-CPE-BAT-A", "ESW1-CPE-BAT-A.conf")
 
 
 if __name__ == '__main__':
