@@ -1372,3 +1372,85 @@ paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect t
 2022-05-15 20:55:47,167 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
 2022-05-15 20:55:51,514 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
 2022-05-15 20:56:17,522 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-15 21:31:27,447 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 21:31:35,324 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 21:31:49,127 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-15 21:32:19,663 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 21:32:37,649 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-15 21:32:56,228 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:16:24,473 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:16:33,271 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:16:47,440 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:16:59,615 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-A': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-16 14:16:59,615 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:17:06,881 - nornir.core.task -    ERROR -      start() - Host 'R1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-16 14:17:06,881 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:17:15,392 - nornir.core.task -    ERROR -      start() - Host 'R2-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-16 14:17:15,392 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:17:28,100 - nornir.core.task -    ERROR -      start() - Host 'ESW1-CPE-BAT-B': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 35, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 316, in load_merge_candidate
+    return_status, msg = self._load_candidate_wrapper(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 283, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 626, in _scp_file
+    return self._xfer_file(
+  File "/home/mystic/.local/share/virtualenvs/TP3-Rd6WlCyb/lib/python3.10/site-packages/napalm/ios/ios.py", line 695, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2022-05-16 14:19:04,320 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:19:11,230 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:19:23,137 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:19:56,721 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:20:17,836 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:20:36,814 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
