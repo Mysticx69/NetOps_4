@@ -2,7 +2,7 @@
 
 #Imports#
 from create_config import create_config_cpe_bat_b, create_config_cpe_bat_a
-from run_nornir import deploy_config_all, deploy_config_single
+from run_nornir import deploy_config_all
 
 
 def main() -> None:

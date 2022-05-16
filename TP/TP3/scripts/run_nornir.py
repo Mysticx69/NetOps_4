@@ -62,7 +62,7 @@ def deploy_config_all() -> None:
     for host in nr.inventory.hosts:
         print_result(
             nr.filter(device_name=host).run(task=napalm_configure, filename=f'configs/{host}.conf'))
-        # print_result(nr.filter(device_name=host).run(task=netmiko_save_config))
+        print_result(nr.filter(device_name=host).run(task=netmiko_save_config))
 
 
 def deploy_config_single(host, config_file) -> None:
