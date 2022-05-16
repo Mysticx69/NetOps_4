@@ -1,8 +1,8 @@
 {% for interface in interfaces %}
 interface {{ interface.name }}
 {% if interface.vlan_id != Null %}
-ip address {{ interface.ip }}
 encapsulation dot1q {{ interface.vlan_id }}
+ip address {{ interface.ip }}
 {% endif %}
 no shutdown
 exit
