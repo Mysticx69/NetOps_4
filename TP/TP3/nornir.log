@@ -1454,3 +1454,22 @@ napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled
 2022-05-16 14:19:56,721 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
 2022-05-16 14:20:17,836 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
 2022-05-16 14:20:36,814 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:29:08,101 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:29:15,959 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:29:30,261 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:30:00,952 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:30:20,945 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:30:40,560 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:38:57,062 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:39:06,014 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:39:20,522 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:39:51,498 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:40:11,382 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:40:28,996 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:41:29,228 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:41:35,463 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-16 14:41:37,054 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R2-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:41:48,533 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-16 14:41:51,126 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
+2022-05-16 14:42:16,367 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
+2022-05-16 14:42:21,579 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
