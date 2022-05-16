@@ -1473,3 +1473,4 @@ napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled
 2022-05-16 14:41:51,126 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/ESW1-CPE-BAT-A.conf'} on 1 hosts
 2022-05-16 14:42:16,367 -  nornir.core -     INFO -        run() - Running task 'netmiko_save_config' with args {} on 1 hosts
 2022-05-16 14:42:21,579 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-B.conf'} on 1 hosts
+2022-05-16 14:50:49,174 -  nornir.core -     INFO -        run() - Running task 'napalm_configure' with args {'filename': 'configs/R1-CPE-BAT-A.conf'} on 1 hosts
