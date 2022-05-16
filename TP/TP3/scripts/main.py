@@ -13,7 +13,7 @@ def main() -> None:
     create_config_cpe_bat_b()
 
     #Deploy conf
-    deploy_config_all()
+    #deploy_config_all()
 
 
 if __name__ == '__main__':
