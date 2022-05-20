@@ -45,7 +45,7 @@ def devices():
     """Devices endpoint"""
     if request.method == "GET":
         devices_list = get_inventory()
-        return jsonify(devices=devices_list, total_count=len(devices_list))
+        return jsonify(total_count=len(devices_list), device=devices_list)
 
     if request.method == "POST":
         data = request.get_json()

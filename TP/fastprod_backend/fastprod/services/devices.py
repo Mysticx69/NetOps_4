@@ -1,7 +1,8 @@
 """Endpoints"""
 from flask import (abort, make_response, jsonify)
-from utils.inventory import add_item_to_hosts_yaml, delete_item_from_hosts_yaml
-from api import app
+from nornir import InitNornir
+from utils.inventory import add_item_to_hosts_yaml, delete_item_from_hosts_yaml  #pylint: disable=import-error
+from api import app  #pylint: disable=import-error
 from nornir_utils.plugins.functions import print_result
 from nornir_napalm.plugins.tasks import napalm_get
 
@@ -16,6 +17,7 @@ def get_inventory():
 def add_device(device):
     """Add device"""
     device = add_item_to_hosts_yaml(item=device)
+    InitNornir()
     return device
 
 
@@ -31,6 +33,7 @@ def delete_device(device):
     """ Delete device """
     try:
         delete_item_from_hosts_yaml(item=device)
+        InitNornir()
     except Exception as error:
         abort(make_response(jsonify(message="Unable to delete this device", error=str(error)), 500))
 
